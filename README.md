@@ -40,20 +40,23 @@ The back-end interacts with third-party APIs, **Date Nager** and **Countries Now
    ```bash
    git clone <repository-url>
    cd <repository-folder>
+   ```
 
 2. Install dependencies and start the front-end:
 
-  ```bash
-  cd client
-  npm install
-  npm run dev
+   ```bash
+   cd client
+   npm install
+   npm run dev
+   ```
 
 3. Install dependencies and start the back-end:
 
-  ```bash
-  cd ../api
-  npm install
-  npm run start:dev
+   ```bash
+   cd ../api
+   npm install
+   npm run start:dev
+   ```
 
 ### Environment Variables
 
