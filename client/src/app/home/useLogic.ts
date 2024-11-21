@@ -2,11 +2,7 @@ import { useEndpoints } from "@/shared/hooks/useEndpoints";
 import { useToaster } from "@/shared/hooks/useToaster";
 import { handleAxiosError } from "@/shared/utils/handleAxiosError";
 import { useEffect, useState } from "react";
-
-type Countries = {
-  countryCode: "string";
-  name: "string";
-};
+import { Countries } from "./types";
 
 export function useLogic() {
   const [isLoading, setIsLoading] = useState(false);
