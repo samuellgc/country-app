@@ -20,7 +20,7 @@ export class DateNagerService {
       const response = await lastValueFrom(this.httpService.get(url));
       return response.data;
     } catch (error) {
-      throw new Error(`Failed to fetch holidays: ${error.message}`);
+      throw new Error(`Failed to fetch countries: ${error.message}`);
     }
   }
 
@@ -30,7 +30,7 @@ export class DateNagerService {
       const response = await lastValueFrom(this.httpService.get(url));
       return response.data;
     } catch (error) {
-      throw new Error(`Failed to fetch holidays: ${error.message}`);
+      throw new Error(`Failed to fetch country: ${error.message}`);
     }
   }
 }

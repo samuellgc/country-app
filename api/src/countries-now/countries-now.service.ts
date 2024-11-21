@@ -24,7 +24,7 @@ export class CountriesNowService {
       const response = await lastValueFrom(this.httpService.post(url, data));
       return response.data;
     } catch (error) {
-      throw new Error(`Failed to fetch holidays: ${error.message}`);
+      throw new Error(`Failed to fetch country population: ${error.message}`);
     }
   }
 
@@ -34,7 +34,7 @@ export class CountriesNowService {
       const response = await lastValueFrom(this.httpService.post(url, data));
       return response.data;
     } catch (error) {
-      throw new Error(`Failed to fetch holidays: ${error.message}`);
+      throw new Error(`Failed to fetch country flag: ${error.message}`);
     }
   }
 }
