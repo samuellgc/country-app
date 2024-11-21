@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./assets/css/globals.css";
+import "../shared/assets/css/globals.css";
 
 const geistSans = localFont({
-  src: "./assets/fonts/GeistVF.woff",
+  src: "../shared/assets/fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
 const geistMono = localFont({
-  src: "./assets/fonts/GeistMonoVF.woff",
+  src: "../shared/assets/fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
 });
@@ -28,7 +28,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <header className="py-3 px-6 min-h-20 bg-sky-500 flex items-center">
+          <h1 className="text-xl font-bold text-white">Country App</h1>
+        </header>
+        <main className="w-full h-full bg-gray-50 p-3">{children}</main>
       </body>
     </html>
   );
