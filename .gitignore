@@ -1,6 +1,7 @@
 # compiled output
 */dist
 */node_modules
+*/build
 
 # Logs
 */logs
@@ -34,5 +35,29 @@
 */!.vscode/launch.json
 */!.vscode/extensions.json
 
-# ENVs
-*/.env
+# vercel
+*/.vercel
+
+# typescript
+*/*.tsbuildinfo
+*/next-env.d.ts
+
+# dependencies
+*/.pnp
+*/.pnp.*
+*/.yarn/*
+*/!.yarn/patches
+*/!.yarn/plugins
+*/!.yarn/releases
+*/!.yarn/versions
+
+# testing
+*/coverage
+
+# next.js
+*/.next/
+*/out/
+
+# misc
+*/.DS_Store
+*/*.pem
