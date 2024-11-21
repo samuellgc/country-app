@@ -1,7 +1,7 @@
 "use client";
 
 import { PageLoading } from "@/shared/components/PageLoading";
-import { useLogic } from "./home/hooks/useLogic";
+import { useLogic } from "./home/useLogic";
 import { Icon } from "@iconify/react";
 import { useRedirect } from "@/shared/hooks/useRedirect";
 import { SearchInput } from "@/shared/components/SearchInput";
@@ -35,7 +35,11 @@ export default function Home() {
             filteredCountries.map((country) => (
               <li
                 key={country.countryCode}
-                onClick={() => goTo(`/country/${country.countryCode}`)}
+                onClick={() =>
+                  goTo(
+                    `/country/${country.name.toLowerCase()}-${country.countryCode.toLowerCase()}`
+                  )
+                }
                 className="h-14 cursor-pointer flex items-center border rounded-md px-3 hover:bg-gray-50/60"
               >
                 {country.name}
